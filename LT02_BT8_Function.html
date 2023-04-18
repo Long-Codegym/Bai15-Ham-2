@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    function array(arr) {
+        let viTriDau=0;
+        let viTriCuoi = arr.length-1;
+        while (viTriDau<viTriCuoi){
+            let i = arr[viTriDau];
+            arr[viTriDau]= arr[viTriCuoi];
+            arr[viTriCuoi]=i;
+            viTriDau++;
+            viTriCuoi--;
+        }
+        document.writeln(arr);
+    }
+    array([1,3,5,7,9,11]);
+
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="num" type="text" placeholder="nhập số cần kiểm tra">
+<br>
+<br>
+<button onclick="start()">Kiểm tra</button>
+<p id="kQ">kết quả là</p>
+</body>
+</html>
+
+<script>
+
+
+    function start() {
+        let a = parseInt(document.getElementById("num").value);
+        let kQ;
+        //khai biến check trung gian
+        let isPrime = true;
+        // kiểm tra số được nhập có phải là 1 không
+        if (a <= 1) {
+            isPrime = false;
+        } else {
+            for (let i = 2; i <= a; i++) {
+                if (a % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        if (isPrime) {
+            kQ = a + " là số nguyen tố";
+        } else {
+            kQ = a + " không là số nguyên tố";
+        }
+        document.getElementById("kQ").innerHTML = kQ;
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="fee">kết quả đổi meter to feet</p>
+<p id="meter">kết quả đổi</p>
+
+</body>
+</html>
+
+<script>
+
+    function meterToFeet(m) {
+        let feet = 3.280 * m;
+        document.getElementById("fee").innerText = "meter to feet = " + feet + " feet";
+    }
+
+    function feetToMeter(f) {
+        let met = f / 3.280;
+        document.getElementById("meter").innerText = "feet to meter = " + met + " m";
+    }
+
+    meterToFeet(m = +prompt("nhập mét"));
+    feetToMeter(f = +prompt("nhập feet"))
+
+</script>
